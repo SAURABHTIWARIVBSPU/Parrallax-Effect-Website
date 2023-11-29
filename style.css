@@ -4,18 +4,16 @@
   box-sizing: border-box;
 }
 
-
 #wrapper {
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
-  perspective: 20px; /*distance between browser window and eyes, enabling 3D , z-axis */
+  perspective: 20px;
 }
 
 .container {
   position: relative;
   height: 100%;
-  /* width: 100%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +28,6 @@
 .foreground {
   transform: translateZ(-20px) scale(3);
 }
-
 
 .background,
 .foreground {
@@ -58,37 +55,39 @@ section {
   padding: 5rem 0;
 }
 
-.secHeading{
-    font-size: 5rem;
-    padding: 0 10rem;
+.secHeading {
+  font-size: 5rem;
+  padding: 0 10%;
+  text-align: center;
 }
 
 .text {
-    font-size: 1.5rem;
-    padding: 0 10rem;
-    margin: 5rem 0;
+  font-size: 1.5rem;
+  padding: 0 10%;
+  margin: 5rem 0;
+  text-align: justify;
 }
 
-.bg{
-    position: relative;
-    width: 100%;
-    height: 500px;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+.bg {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
-.description{
-
-    position: absolute;
-    background-color: white;
-    padding: 0.5rem 2.5rem;
-    top:50%;
-    left:50%;
-    transform: translateX(-50%) translateX(-50%) ;
-    color: black;
-   font-size: 3.5rem;
-   font-weight: 550;
+.description {
+  position: absolute;
+  background-color: white;
+  padding: 0.5rem 2.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateX(-50%);
+  color: black;
+  font-size: 3.5rem;
+  font-weight: 550;
+  text-align: center;
 }
 
 .bg1 {
@@ -102,7 +101,34 @@ section {
 .bg3 {
   background-image: url(sport-3.jpg);
 }
-.cpy{
+
+.cpy {
   color: rgb(247, 0, 0);
   text-align: center;
+  padding: 2rem 0;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 6rem;
+  }
+
+  .secHeading,
+  .text,
+  .description {
+    padding: 0 5%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .secHeading,
+  .text,
+  .description {
+    padding: 0 3%;
+  }
 }
